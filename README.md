@@ -123,6 +123,12 @@ ANTHROPIC_MODEL=claude-sonnet-5-5
 (`app/ai/base.py`), כך שהחלפה בין ספקי AI נוספים בעתיד היא תוספת מחלקה
 אחת בלבד.
 
+## פריסה ל-Google Cloud (Cloud Run + Cloud SQL)
+
+ראו [`gcp/README.md`](gcp/README.md) — סקריפט `gcp/deploy.sh` מריץ פריסה מלאה
+(Cloud Run לשני השירותים + Cloud SQL Postgres). יש להריץ אותו עם `gcloud`
+מחובר לחשבון שלכם; הוא כולל גם הוראות עלויות וניקוי משאבים.
+
 ## פריסה ל-Render
 
 `render.yaml` מגדיר: מסד PostgreSQL מנוהל, שירות Web ל-Backend (כולל

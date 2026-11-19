@@ -1,0 +1,16 @@
+# בנייה של ה-Frontend עם NEXT_PUBLIC_API_BASE_URL כ-build-arg (Next.js צורך
+# משתנה זה בזמן build, ולכן אי אפשר להעביר אותו רק כ-env var בזמן ריצה ב-Cloud Run).
+# מופעל מתוך deploy.sh אחרי שכתובת ה-Backend כבר ידועה.
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - build
+      - -t
+      - "${_IMAGE}"
+      - --build-arg
+      - "NEXT_PUBLIC_API_BASE_URL=${_API_URL}"
+      - .
+images:
+  - "${_IMAGE}"
+options:
+  logging: CLOUD_LOGGING_ONLY
