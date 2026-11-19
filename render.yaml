@@ -1,6 +1,6 @@
 databases:
   - name: media-intelligence-db
-    plan: starter
+    plan: basic-256mb
     databaseName: media_intelligence
     user: media
 
