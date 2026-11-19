@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f8fa;
+  --foreground: #16181d;
+  --card: #ffffff;
+  --card-foreground: #16181d;
+  --muted: #eef0f3;
+  --muted-foreground: #5b6270;
+  --border: #e2e4e9;
+  --primary: #3454d1;
+  --primary-foreground: #ffffff;
+  --secondary: #eef0f3;
+  --secondary-foreground: #16181d;
+  --ring: #3454d1;
+
+  --success-bg: #dcf5e4;
+  --success-fg: #0f7a3d;
+  --danger-bg: #fbe1e1;
+  --danger-fg: #b3261e;
+  --warning-bg: #fdf0d2;
+  --warning-fg: #92650a;
+
+  --sentiment-positive: #2e9c5a;
+  --sentiment-negative: #d1453d;
+  --sentiment-neutral: #8d93a1;
+  --sentiment-mixed: #c08a2e;
+}
+
+:root[data-theme="dark"] {
+  --background: #0f1115;
+  --foreground: #e9eaee;
+  --card: #171a20;
+  --card-foreground: #e9eaee;
+  --muted: #20242c;
+  --muted-foreground: #9499a6;
+  --border: #272b33;
+  --primary: #5c78e8;
+  --primary-foreground: #0f1115;
+  --secondary: #20242c;
+  --secondary-foreground: #e9eaee;
+  --ring: #5c78e8;
+
+  --success-bg: #103c23;
+  --success-fg: #4ade80;
+  --danger-bg: #3a1414;
+  --danger-fg: #f87171;
+  --warning-bg: #3a2c0c;
+  --warning-fg: #facc15;
+
+  --sentiment-positive: #4ade80;
+  --sentiment-negative: #f87171;
+  --sentiment-neutral: #9499a6;
+  --sentiment-mixed: #facc15;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #0f1115;
+    --foreground: #e9eaee;
+    --card: #171a20;
+    --card-foreground: #e9eaee;
+    --muted: #20242c;
+    --muted-foreground: #9499a6;
+    --border: #272b33;
+    --primary: #5c78e8;
+    --primary-foreground: #0f1115;
+    --secondary: #20242c;
+    --secondary-foreground: #e9eaee;
+    --ring: #5c78e8;
+
+    --success-bg: #103c23;
+    --success-fg: #4ade80;
+    --danger-bg: #3a1414;
+    --danger-fg: #f87171;
+    --warning-bg: #3a2c0c;
+    --warning-fg: #facc15;
+
+    --sentiment-positive: #4ade80;
+    --sentiment-negative: #f87171;
+    --sentiment-neutral: #9499a6;
+    --sentiment-mixed: #facc15;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-heebo);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-heebo), "Segoe UI", Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+}
